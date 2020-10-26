@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Type1</name>
+    <events>
+        <include>engine</include>
+        <event-block sid="763832244066165">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="616979187874835" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="346414519729617" type="Function">
+                    <param id="0" name="Name">&quot;ChangeAnimationObject&quot;</param>
+                    <param id="1" name="Parameter {n}">TYPE_DEFAULT</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

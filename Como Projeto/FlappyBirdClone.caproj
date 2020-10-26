@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>FlappyBirdClone</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>Robson Melo</author>
+    <author-email>melodisouza@gmail.com</author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>ts0knpmje71q</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>316</width>
+        <height>566</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>splashScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="background" sid="960662243029071">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797518903393520" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\background.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Type2" pingpong="0" repeatcount="1" repeatto="0" sid="260867413198443" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\backgroundType2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Type3" pingpong="0" repeatcount="1" repeatto="0" sid="342311392146799" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\fundoo campo type3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RA" sid="959682752097367">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="flappy" sid="195031416702790">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="179174754908415">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="707582375574476" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\flappy\1.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.470588" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.470588" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\flappy\2.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.470588" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.470588" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\flappy\3.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.470588" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.470588" y="1" />
+                            <point x="0.0588235" y="0.916667" />
+                            <point x="0.0588235" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="1" name="Type2" pingpong="0" repeatcount="1" repeatto="0" sid="810377134914832" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="Type3" pingpong="0" repeatcount="1" repeatto="0" sid="183937362286651" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.529412" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.529412" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.529412" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.529412" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start" sid="438880387812623">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834369295664169" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\start.png">
+                        <collision-poly>
+                            <point x="0.446429" y="0.510204" />
+                            <point x="0.5" y="0" />
+                            <point x="0.357143" y="0.734694" />
+                            <point x="0.535714" y="0.489796" />
+                            <point x="0.875" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.857143" />
+                            <point x="0.446429" y="0.489796" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pipebottom" sid="134686998319811">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isScoring" sid="405516856341004" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216633190054131" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\Canos\pipe-bottom.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.961538" y="0.99375" />
+                            <point x="0.0384615" y="0.99375" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Type2" pingpong="0" repeatcount="1" repeatto="0" sid="584195295626976" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\bambutype2Baixo.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Type3" pingpong="0" repeatcount="1" repeatto="0" sid="805567343194036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\rede do gol type3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pipetop" sid="843234454914905">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177820202772024" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\Canos\pipe-top.png">
+                        <collision-poly>
+                            <point x="0.0384615" y="0.00625" />
+                            <point x="0.961538" y="0.00625" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Type2" pingpong="0" repeatcount="1" repeatto="0" sid="962819019825818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\bambutype2Cima.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Type3" pingpong="0" repeatcount="1" repeatto="0" sid="899340433303482" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\Sprites\rede do gol type3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="floor1" sid="443625555664671">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="247543670814275">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\chao2.png" />
+        </object-type>
+        <object-type name="floor2" sid="935015373728557">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="762845177530178">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\chao1.png" />
+        </object-type>
+        <object-type name="result" sid="184617102159646">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648852909905315" speed="5">
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.508772" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\resultado.png">
+                        <collision-poly>
+                            <point x="0.0176991" y="0.0350877" />
+                            <point x="0.495575" y="0" />
+                            <point x="0.982301" y="0.0350877" />
+                            <point x="1" y="0.491228" />
+                            <point x="0.982301" y="0.964912" />
+                            <point x="0.495575" y="1" />
+                            <point x="0.0176991" y="0.964912" />
+                            <point x="0" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="medal" sid="563622285585547">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605953845893778" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\bronze.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.136364" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.136364" />
+                            <point x="1" y="0.5" />
+                            <point x="0.863636" y="0.863636" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136364" y="0.863636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\prata.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.136364" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.136364" />
+                            <point x="1" y="0.5" />
+                            <point x="0.863636" y="0.863636" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136364" y="0.863636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\ouro.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.136364" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.136364" />
+                            <point x="1" y="0.5" />
+                            <point x="0.863636" y="0.863636" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136364" y="0.863636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtScore" sid="540815528785670">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="txtBestScore" sid="363232298992785">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="menu" sid="570732676249726">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491394428073644" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\menu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="new" sid="709789357415778">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744725498320399" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="D:\Curso_SI_Alfa2020\SI_ALFA\desenvolvimento de jogos\2Bimestre\trabalho01\1Trabalho2bimJogosFlappyMaterial\Flappy\result\new.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="468989711448727">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Function" sid="315161425120142">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="WebStorage" sid="346926083819160">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Audio" sid="785388600896512">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>splashScreen.xml</layout>
+        <layout>initial.xml</layout>
+        <layout>Type1.xml</layout>
+        <layout>Type2.xml</layout>
+        <layout>Type3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>splashScreen.xml</event-sheet>
+        <event-sheet>initial.xml</event-sheet>
+        <event-sheet>engine.xml</event-sheet>
+        <event-sheet>global.xml</event-sheet>
+        <event-sheet>Type1.xml</event-sheet>
+        <event-sheet>Type2.xml</event-sheet>
+        <event-sheet>Type3.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="17">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="18" />
+        <global-instance type="WebStorage" uid="19" />
+        <global-instance type="Audio" uid="20">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="punch.m4a" />
+        <file name="punch.ogg" />
+        <file name="sfx_wing.m4a" />
+        <file name="sfx_wing.ogg" />
+        <file name="sfx_point.m4a" />
+        <file name="sfx_point.ogg" />
+        <file name="fundo01.m4a" />
+        <file name="fundo01.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

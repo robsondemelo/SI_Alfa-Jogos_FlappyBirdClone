@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>global</name>
+    <events>
+        <variable constant="0" name="CurrentAnimation" sid="518999357801115" static="0" type="text">Default</variable>
+        <variable constant="1" name="TYPE3" sid="981613804149830" static="0" type="text">Type3</variable>
+        <variable constant="1" name="TYPE2" sid="396922854321929" static="0" type="text">Type2</variable>
+        <variable constant="1" name="TYPE_DEFAULT" sid="738647933649445" static="0" type="text">Default</variable>
+        <variable constant="1" name="MEMORYBESTSCORE" sid="819052370976458" static="0" type="text">bestScoreEver</variable>
+        <variable constant="0" name="speedMovement" sid="383386026483948" static="0" type="number">4</variable>
+        <variable constant="0" name="createObstacle" sid="446679196489368" static="0" type="number">1.2</variable>
+        <variable constant="0" name="score" sid="653541121954536" static="0" type="number">0</variable>
+        <variable constant="0" name="impulseForce" sid="196509348641999" static="0" type="number">700</variable>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>engine</name>
+    <events>
+        <event-block sid="873416341043998">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="655913862942466" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="392328409830757" type="Function">
+                    <param id="0" name="Name">&quot;StartGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="867023419034381">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="691167122808008" type="Touch" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="759337313619545" type="flappy">
+                    <param id="0" name="Vector Y">flappy.Y -impulseForce</param>
+                </action>
+                <action id="0" name="Play" sid="203323254770217" type="Audio">
+                    <param id="0" name="Audio file">sfx_wing</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="824452845563191">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="230134332554145" type="System" />
+                <condition id="-3" name="Is on-screen" sid="602220807278013" type="flappy" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="292521354519225" type="floor1">
+                    <param id="0" name="X">floor1.X -speedMovement</param>
+                </action>
+                <action id="-1" name="Set X" sid="812554854974643" type="floor2">
+                    <param id="0" name="X">floor2.X -speedMovement</param>
+                </action>
+                <action id="-1" name="Set X" sid="629831468485430" type="pipebottom">
+                    <param id="0" name="X">pipebottom.X -speedMovement</param>
+                </action>
+                <action id="-1" name="Set X" sid="759378097797817" type="pipetop">
+                    <param id="0" name="X">pipetop.X -speedMovement</param>
+                </action>
+                <action id="0" name="Set text" sid="755778301609870" type="txtScore">
+                    <param id="0" name="Text">score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="860239516443503">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="563701126516591" type="floor1">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-500</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="972374293871935" type="flappy" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="110909233401833" type="floor1">
+                    <param id="0" name="X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="755782455964158">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="345553795405666" type="floor2">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-500</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="987172452263515" type="flappy" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="859052864511104" type="floor2">
+                    <param id="0" name="X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309296375220623">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="899427225121469" type="System">
+                    <param id="0" name="Interval (seconds)">createObstacle</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="573613434285847" type="flappy" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="741067321406308" type="System">
+                    <param id="0" name="Object to create">pipetop</param>
+                    <param id="1" name="Layer">&quot;pipes&quot;</param>
+                    <param id="2" name="X">400</param>
+                    <param id="3" name="Y">random (50, -250)</param>
+                </action>
+                <action id="-3" name="Create object" sid="410131030250588" type="System">
+                    <param id="0" name="Object to create">pipebottom</param>
+                    <param id="1" name="Layer">&quot;pipes&quot;</param>
+                    <param id="2" name="X">pipetop.X</param>
+                    <param id="3" name="Y">pipetop.Y +710</param>
+                </action>
+                <action id="4" name="Set animation" sid="262493060524232" type="pipetop">
+                    <param id="0" name="Animation">CurrentAnimation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="380584181596418" type="pipebottom">
+                    <param id="0" name="Animation">CurrentAnimation</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970785307109909">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="483266784317095" type="flappy">
+                    <param id="0" name="Object">pipebottom</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="124485855190725" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="596087038925305">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="297343675310861" type="flappy">
+                    <param id="0" name="Object">pipetop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="129546179283275" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="354220774772554">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="416868945817569" type="flappy">
+                    <param id="0" name="Object">floor1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="201575276045352" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="340578594357062">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="342734654731585" type="flappy" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="671138122061325" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="897010622694089">
+            <conditions>
+                <condition id="0" name="On function" sid="448349195253430" type="Function">
+                    <param id="0" name="Name">&quot;GameOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="905889543063717" type="flappy" />
+                <action id="-4" name="Set layer visible" sid="504142078743911" type="System">
+                    <param id="0" name="Layer">&quot;hud&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="750371515939922" type="new">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="748229895245378" type="medal">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="780760108276026" type="txtBestScore">
+                    <param id="0" name="Text">WebStorage.LocalValue(MEMORYBESTSCORE)</param>
+                </action>
+                <action id="0" name="Play" sid="946617387506628" type="Audio">
+                    <param id="0" name="Audio file">punch</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="936392388178927">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="923047093370373" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="667563114855480" type="medal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="256944204493788" type="medal">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120406288798068">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="740895463319553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="786457280517536" type="medal">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="960175821597314">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="413885642635807" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="309971232185356" type="medal">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="595520290323288">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="997540362472245" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">WebStorage.LocalValue(MEMORYBESTSCORE)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="118276735254526" type="new">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="408799624123499" type="WebStorage">
+                            <param id="0" name="Key">MEMORYBESTSCORE</param>
+                            <param id="1" name="Value">score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="663854371130749">
+            <conditions>
+                <condition id="0" name="On function" sid="579225682416522" type="Function">
+                    <param id="0" name="Name">&quot;StartGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="686195351593261" type="System">
+                    <param id="0" name="Layer">&quot;hud&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="605674228342634" type="new">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="363727644465408" type="medal">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="865999206010935" type="pipebottom" />
+                <action id="-9" name="Destroy" sid="124062986136371" type="pipetop" />
+                <action id="-9" name="Set value" sid="742294447157818" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="324157940761050" type="Audio">
+                    <param id="0" name="Audio file">fundo01</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="259054998032101">
+            <conditions>
+                <condition id="3" name="On touched object" sid="534585694576424" type="Touch">
+                    <param id="0" name="Object">menu</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="845975461512149" type="System">
+                    <param id="0" name="Layer">&quot;hud&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="110830585985111" type="System">
+                    <param id="0" name="Layout">initial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="303349085778433">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="527156017242754" type="pipetop">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">flappy.X</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="304501692853360" type="pipebottom">
+                    <param id="0" name="Instance variable">isScoring</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="483868667163807" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="767839963867254" type="pipebottom">
+                    <param id="0" name="Instance variable">isScoring</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="618204246470472" type="Audio">
+                    <param id="0" name="Audio file">sfx_point</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-8</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="680489589001147">
+            <conditions>
+                <condition id="3" inverted="1" name="Local key exists" sid="513599316507924" type="WebStorage">
+                    <param id="0" name="Key">MEMORYBESTSCORE</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set local value" sid="886728906620312" type="WebStorage">
+                    <param id="0" name="Key">MEMORYBESTSCORE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="269269619862237">
+            <conditions>
+                <condition id="0" name="On function" sid="138221394069287" type="Function">
+                    <param id="0" name="Name">&quot;ChangeAnimationObject&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="750700470851866" type="flappy">
+                    <param id="0" name="Animation">Function.Param(0)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="543973108979123" type="background">
+                    <param id="0" name="Animation">Function.Param(0)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="562657977640792" type="System">
+                    <param id="0" name="Variable">CurrentAnimation</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
